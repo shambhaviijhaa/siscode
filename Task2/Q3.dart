@@ -1,18 +1,11 @@
-void main() 
-{
-  List<int> a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+import 'dart:io';
+void main() {
+  print("enter name:");
+  String? name = stdin.readLineSync();
+  bday(name);
+ }
 
-  int i = 0;
-  List<int> l = [];
-
-  for (var e in a)
-  {
-    if (++i % 2 == 0) 
-    {
-      l.add(e);
-    }
-  }
-  print(l);
-  
-  print([for (var e in a) if (++i % 2 == 0) e]);
+void bday(n){
+  var details = {'abc':'5.4.2003','def':'27.12.2000','xyz':'4.7.2006','pqr':'1.2.2003'}; 
+  print('birthday of $n is ${details[n]}');
 }
